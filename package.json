@@ -4,7 +4,7 @@
   "authors": [
     "Tobias Reich <tobias@electerious.com>"
   ],
-  "description": "",
+  "description": "Changes the the extension of a given filename or path",
   "main": "src/index.js",
   "keywords": [
     "file",
