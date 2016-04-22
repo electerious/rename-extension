@@ -1,0 +1,38 @@
+{
+  "name": "rename-extension",
+  "version": "1.0.0",
+  "authors": [
+    "Tobias Reich <tobias@electerious.com>"
+  ],
+  "description": "",
+  "main": "src/index.js",
+  "keywords": [
+    "file",
+    "rename",
+    "name",
+    "ext",
+    "extension",
+    "change",
+    "name",
+    "path"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/electerious/rename-extension",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/electerious/rename-extension.git"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "test": "istanbul cover _mocha"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5"
+  }
+}
