@@ -5,7 +5,7 @@
 ## Install
 
 ```
-npm i rename-extension
+npm install rename-extension
 ```
 
 ## Usage
