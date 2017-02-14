@@ -2,7 +2,7 @@
 
 const path = require('path')
 
-/*
+/**
  * Rename the extension of a file in a path.
  * @param {String} filePath - Path to a file.
  * @param {String} newExt - New extension for the file.
