@@ -16,7 +16,8 @@ npm install rename-extension
 const renameExtension = require('rename-extension')
 
 renameExtension('a/b/c.js', null) // a/b/c
-renameExtension('a/b/c.js', 'css') // a/b/c.css
+renameExtension('a/b/c.js', '.css') // a/b/c.css
+renameExtension('a/b/c.min.js', '.css') // a/b/c.min.css
 renameExtension('a/b/.npmrc', null) // a/b/.npmrc
-renameExtension('a/b/.npmrc', 'json') // a/b/.npmrc.json
+renameExtension('a/b/.npmrc', '.json') // a/b/.npmrc.json
 ```

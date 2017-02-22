@@ -32,7 +32,7 @@ describe('index()', function() {
 	it('should change the extension when called with valid parameters (absolute)', function() {
 
 		const filePath = '/a/b/c.js'
-		const newExt   = 'css'
+		const newExt   = '.css'
 
 		assert.strictEqual(index(filePath, newExt), '/a/b/c.css')
 
@@ -41,7 +41,7 @@ describe('index()', function() {
 	it('should change the extension when called with valid parameters (relative)', function() {
 
 		const filePath = './../a/b/c.js'
-		const newExt   = 'css'
+		const newExt   = '.css'
 
 		assert.strictEqual(index(filePath, newExt), './../a/b/c.css')
 
@@ -50,7 +50,7 @@ describe('index()', function() {
 	it('should change the extension when called with a dotfile which has an extension', function() {
 
 		const filePath = '.min.js'
-		const newExt   = 'css'
+		const newExt   = '.css'
 
 		assert.strictEqual(index(filePath, newExt), '.min.css')
 
@@ -59,7 +59,7 @@ describe('index()', function() {
 	it('should add the extension when called with a dotfile which has no extension', function() {
 
 		const filePath = '.js'
-		const newExt   = 'css'
+		const newExt   = '.css'
 
 		assert.strictEqual(index(filePath, newExt), '.js.css')
 
@@ -68,7 +68,7 @@ describe('index()', function() {
 	it('should add the extension when called with an extension-less filePath', function() {
 
 		const filePath = '/a/b/c'
-		const newExt   = 'css'
+		const newExt   = '.css'
 
 		assert.strictEqual(index(filePath, newExt), '/a/b/c.css')
 

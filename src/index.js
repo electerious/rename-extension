@@ -12,8 +12,8 @@ module.exports = function(filePath, newExt) {
 
 	const parsedPath = path.parse(filePath)
 
-	// Add a leading dot when an extension was given
-	parsedPath.ext = (newExt==null || newExt==='' ? '' : '.' + newExt)
+	// Change extension
+	parsedPath.ext = newExt
 
 	// Force path.format to use name and ext instead of base
 	parsedPath.base = null
