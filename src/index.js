@@ -13,7 +13,7 @@ module.exports = function(filePath, newExt) {
 	// Convert to reliable path that works cross-platform
 	filePath = path.normalize(filePath)
 
-	filePath = path.parse(filePath)
+	const parsedPath = path.parse(filePath)
 
 	parsedPath.ext = newExt
 
