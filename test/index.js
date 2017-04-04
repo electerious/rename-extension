@@ -1,5 +1,6 @@
 'use strict'
 
+const path = require('path')
 const assert = require('chai').assert
 const index  = require('./../src/index')
 
@@ -16,7 +17,7 @@ describe('index()', function() {
 		const filePath = '/a/b/c.js'
 		const newExt   = null
 
-		assert.strictEqual(index(filePath, newExt), '/a/b/c')
+		assert.strictEqual(index(filePath, newExt), path.normalize('/a/b/c'))
 
 	})
 
@@ -25,7 +26,7 @@ describe('index()', function() {
 		const filePath = '/a/b/c.js'
 		const newExt   = ''
 
-		assert.strictEqual(index(filePath, newExt), '/a/b/c')
+		assert.strictEqual(index(filePath, newExt), path.normalize('/a/b/c'))
 
 	})
 
@@ -34,7 +35,7 @@ describe('index()', function() {
 		const filePath = '/a/b/c.js'
 		const newExt   = '.css'
 
-		assert.strictEqual(index(filePath, newExt), '/a/b/c.css')
+		assert.strictEqual(index(filePath, newExt), path.normalize('/a/b/c.css'))
 
 	})
 
@@ -43,7 +44,7 @@ describe('index()', function() {
 		const filePath = './../a/b/c.js'
 		const newExt   = '.css'
 
-		assert.strictEqual(index(filePath, newExt), './../a/b/c.css')
+		assert.strictEqual(index(filePath, newExt), path.normalize('./../a/b/c.css'))
 
 	})
 
@@ -52,7 +53,7 @@ describe('index()', function() {
 		const filePath = '.min.js'
 		const newExt   = '.css'
 
-		assert.strictEqual(index(filePath, newExt), '.min.css')
+		assert.strictEqual(index(filePath, newExt), path.normalize('.min.css'))
 
 	})
 
@@ -61,7 +62,7 @@ describe('index()', function() {
 		const filePath = '.js'
 		const newExt   = '.css'
 
-		assert.strictEqual(index(filePath, newExt), '.js.css')
+		assert.strictEqual(index(filePath, newExt), path.normalize('.js.css'))
 
 	})
 
@@ -70,7 +71,7 @@ describe('index()', function() {
 		const filePath = '/a/b/c'
 		const newExt   = '.css'
 
-		assert.strictEqual(index(filePath, newExt), '/a/b/c.css')
+		assert.strictEqual(index(filePath, newExt), path.normalize('/a/b/c.css'))
 
 	})
 

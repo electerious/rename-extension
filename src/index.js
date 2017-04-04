@@ -10,9 +10,11 @@ const path = require('path')
  */
 module.exports = function(filePath, newExt) {
 
-	const parsedPath = path.parse(filePath)
+	// Convert to reliable path that works cross-platform
+	filePath = path.normalize(filePath)
 
-	// Change extension
+	filePath = path.parse(filePath)
+
 	parsedPath.ext = newExt
 
 	// Force path.format to use name and ext instead of base
