@@ -21,3 +21,14 @@ renameExtension('a/b/c.min.js', '.css') // a/b/c.min.css
 renameExtension('a/b/.npmrc', null) // a/b/.npmrc
 renameExtension('a/b/.npmrc', '.json') // a/b/.npmrc.json
 ```
+
+## API
+
+### Parameters
+
+- `filePath` `{String}` Path to a file.
+- `newExt` `{String}` New extension for the file.
+
+### Returns
+
+- `filePath` `{String}` Path ending with the new extension.
