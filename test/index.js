@@ -2,7 +2,7 @@
 
 const path = require('path')
 const assert = require('chai').assert
-const index  = require('./../src/index')
+const index = require('./../src/index')
 
 describe('index()', function() {
 
@@ -15,7 +15,7 @@ describe('index()', function() {
 	it('should remove the extension when called without a newExt', function() {
 
 		const filePath = '/a/b/c.js'
-		const newExt   = null
+		const newExt = null
 
 		assert.strictEqual(index(filePath, newExt), path.normalize('/a/b/c'))
 
@@ -24,7 +24,7 @@ describe('index()', function() {
 	it('should remove the extension when called with an empty newExt', function() {
 
 		const filePath = '/a/b/c.js'
-		const newExt   = ''
+		const newExt = ''
 
 		assert.strictEqual(index(filePath, newExt), path.normalize('/a/b/c'))
 
@@ -33,7 +33,7 @@ describe('index()', function() {
 	it('should change the extension when called with valid parameters (absolute)', function() {
 
 		const filePath = '/a/b/c.js'
-		const newExt   = '.css'
+		const newExt = '.css'
 
 		assert.strictEqual(index(filePath, newExt), path.normalize('/a/b/c.css'))
 
@@ -42,7 +42,7 @@ describe('index()', function() {
 	it('should change the extension when called with valid parameters (relative)', function() {
 
 		const filePath = './../a/b/c.js'
-		const newExt   = '.css'
+		const newExt = '.css'
 
 		assert.strictEqual(index(filePath, newExt), path.normalize('./../a/b/c.css'))
 
@@ -51,7 +51,7 @@ describe('index()', function() {
 	it('should change the extension when called with a dotfile which has an extension', function() {
 
 		const filePath = '.min.js'
-		const newExt   = '.css'
+		const newExt = '.css'
 
 		assert.strictEqual(index(filePath, newExt), path.normalize('.min.css'))
 
@@ -60,7 +60,7 @@ describe('index()', function() {
 	it('should add the extension when called with a dotfile which has no extension', function() {
 
 		const filePath = '.js'
-		const newExt   = '.css'
+		const newExt = '.css'
 
 		assert.strictEqual(index(filePath, newExt), path.normalize('.js.css'))
 
@@ -69,7 +69,7 @@ describe('index()', function() {
 	it('should add the extension when called with an extension-less filePath', function() {
 
 		const filePath = '/a/b/c'
-		const newExt   = '.css'
+		const newExt = '.css'
 
 		assert.strictEqual(index(filePath, newExt), path.normalize('/a/b/c.css'))
 
