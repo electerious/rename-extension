@@ -12,7 +12,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [2.0.3] - 2017-08-08
 
-### New
+### Added
 
 - Added a changelog
 
